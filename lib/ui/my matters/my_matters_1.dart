@@ -1,0 +1,115 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:mmm_app_design/ui/home%20page/home_page.dart';
+import 'package:mmm_app_design/ui/my%20matters/all_tab.dart';
+import 'package:mmm_app_design/ui/post%20matter/post_matter_2.dart';
+import 'package:mmm_app_design/ui/proposals/history_tab.dart';
+import 'package:mmm_app_design/ui/proposals/new_tab.dart';
+import 'package:mmm_app_design/ui/search%20and%20filters/search_results.dart';
+import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
+import 'package:mmm_app_design/ui/widgets/custom_textformfield.dart';
+import 'package:mmm_app_design/ui/widgets/elevated_button_filter.dart';
+
+class my_matters_1 extends StatelessWidget {
+  const my_matters_1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 40,
+            ),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => home_page()),
+                    );
+                  },
+                  child: Image.asset('assets/Group 2.png'),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                Text(
+                  'My matters',
+                  style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 650,
+              width: 400,
+              child: DefaultTabController(
+                  length: 4,
+                  child: Column(
+                    children: [
+                      TabBar(tabs: [
+                        Tab(
+                          child: Text(
+                            'All',
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        Tab(
+                          child: Text(
+                            'Opened',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black),
+                          ),
+                        ),
+                        Tab(
+                          child: Text(
+                            'Asigned',
+                            style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black),
+                          ),
+                        ),
+                        Tab(
+                          child: Text(
+                            'Closed',
+                            style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black),
+                          ),
+                        )
+                      ]),
+                      Expanded(
+                        child: TabBarView(children: [
+                          all_tab(),
+                          history_tab(),
+                          all_tab(),
+                          history_tab(),
+                        ]),
+                      )
+                    ],
+                  )),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
