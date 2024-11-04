@@ -67,6 +67,10 @@ class edit_profile extends StatelessWidget {
               ),
               custom_textformfield(
                 hintText: 'Max',
+                suffixIcon: Image.asset(
+                  'assets/cross button.png',
+                  scale: 1.5,
+                ),
               ),
               SizedBox(
                 height: 20,
@@ -83,7 +87,7 @@ class edit_profile extends StatelessWidget {
                 height: 10,
               ),
               custom_textformfield(
-                hintText: ' 91 Southwell Crescent , New South Wales',
+                hintText: ' 91 Southwell Crescent , New South...',
               ),
               SizedBox(
                 height: 20,
@@ -105,7 +109,7 @@ class edit_profile extends StatelessWidget {
                   custom_code_confirmation_textformfield(
                     width: 99.0,
                     height: 48.0,
-                    
+                    hintText: '+61',
                   ),
                   SizedBox(
                     width: 5,
@@ -113,6 +117,7 @@ class edit_profile extends StatelessWidget {
                   custom_code_confirmation_textformfield(
                     width: 225.0,
                     height: 48.0,
+                    hintText: 'Phone number',
                   )
                 ],
               ),

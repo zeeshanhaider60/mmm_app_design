@@ -85,7 +85,10 @@ class update_email extends StatelessWidget {
               ),
               custom_textformfield(
                 hintText: 'marvin.mckinney@example.com',
-                suffixIcon: Image.asset('assets/cross button.png'),
+                suffixIcon: Image.asset(
+                  'assets/cross button.png',
+                  scale: 1.5,
+                ),
               ),
               SizedBox(
                 height: 460,

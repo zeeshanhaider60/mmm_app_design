@@ -52,7 +52,7 @@ class search extends StatelessWidget {
               ),
               custom_textformfield(
                 prefixIcon: Image.asset('assets/search.png'),
-                hintText: 'Search for lawyers, barristers',
+                hintText: 'Select the court of your choice',
               ),
               SizedBox(
                 height: 20,
@@ -72,7 +72,28 @@ class search extends StatelessWidget {
                 height: 10,
               ),
               custom_textformfield(
-                hintText: 'Select the area of practice you want',
+                hintText: 'Select the court of your choice',
+                suffixIcon: Image.asset('assets/chevron-down.png'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Select court',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF5A5C5B)),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              custom_textformfield(
+                hintText: 'Select the court of your choice',
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(
@@ -93,11 +114,11 @@ class search extends StatelessWidget {
                 height: 10,
               ),
               custom_textformfield(
-                hintText: 'Select the state of lawyer',
+                hintText: 'Select the state of matter',
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(
-                height: 340,
+                height: 230,
               ),
               Divider(
                 thickness: 1.5,

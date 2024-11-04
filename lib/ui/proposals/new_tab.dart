@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mmm_app_design/ui/proposals/proposal_details.dart';
+import 'package:mmm_app_design/ui/proposals/submit_proposal.dart';
 import 'package:mmm_app_design/ui/widgets/proposal_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/small_elevated_button.dart';
 
@@ -63,31 +65,21 @@ class new_tab extends StatelessWidget {
                                     SizedBox(
                                       width: 5,
                                     ),
-                                    Text('Aron finich',
+                                    Text('Family law',
                                         style: TextStyle(
                                             fontSize: 14,
-                                            fontWeight: FontWeight.w400,
-                                            color: Color(0xFF454646))),
-                                    Text(
-                                      '\u2022',
-                                      style:
-                                          TextStyle(fontSize: 18, height: 1.5),
-                                    ),
-                                    Text('Legal specialist',
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w400,
+                                            fontWeight: FontWeight.w500,
                                             color: Color(0xFF454646))),
                                   ],
                                 ),
                               ],
                             ),
                             SizedBox(
-                              width: 10,
+                              width: 2,
                             ),
                             Column(
                               children: [
-                                Image.asset('assets/Frame 1989.png'),
+                                Image.asset('assets/Frame 2198.png'),
                                 SizedBox(
                                   height: 22,
                                 ),
@@ -125,23 +117,23 @@ class new_tab extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 15,
+                          height: 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            proposal_elevated_button(
-                              text: 'View details',
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => proposals_details(),
-                                    ));
-                              },
-                            ),
+                            GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => submit_proposal(),
+                                      ));
+                                },
+                                child:
+                                    Image.asset('assets/chevron-down (1).png')),
                             SizedBox(
-                              width: 30,
+                              width: 10,
                             ),
                           ],
                         )

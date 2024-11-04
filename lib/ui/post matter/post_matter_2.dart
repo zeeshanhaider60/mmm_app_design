@@ -170,7 +170,7 @@ class _post_matter_2State extends State<post_matter_2> {
               Row(
                 children: [
                   Text(
-                    'Urgency',
+                    'Type of court',
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
@@ -181,73 +181,92 @@ class _post_matter_2State extends State<post_matter_2> {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  Radio<String>(
-                    value: 'Option 1',
-                    groupValue: _selectedOption,
-                    onChanged: (String? value) {
-                      setState(() {
-                        _selectedOption = value!;
-                      });
-                    },
-                  ),
-                  Text(
-                    'With in 24hrs',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                  ),
-                ],
+              custom_textformfield(
+                hintText: 'Select the type of court',
+                suffixIcon: Image.asset('assets/chevron-down.png'),
+              ),
+              SizedBox(
+                height: 10,
               ),
               Row(
                 children: [
-                  Radio<String>(
-                    value: 'Option 2',
-                    groupValue: _selectedOption,
-                    onChanged: (String? value) {
-                      setState(() {
-                        _selectedOption = value!;
-                      });
-                    },
-                  ),
                   Text(
-                    'With in a week',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    'Status of matter',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF5A5C5B)),
                   ),
                 ],
               ),
-              Row(
-                children: [
-                  Radio<String>(
-                    value: 'Option 3',
-                    groupValue: _selectedOption,
-                    onChanged: (String? value) {
-                      setState(() {
-                        _selectedOption = value!;
-                      });
-                    },
-                  ),
-                  Text(
-                    'With in a month',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                  ),
-                ],
+              SizedBox(
+                height: 10,
+              ),
+              custom_textformfield(
+                hintText: 'Select the current status of matter',
+                suffixIcon: Image.asset('assets/chevron-down.png'),
+              ),
+              SizedBox(
+                height: 10,
               ),
               Row(
                 children: [
-                  Radio<String>(
-                    value: 'Option 4',
-                    groupValue: _selectedOption,
-                    onChanged: (String? value) {
-                      setState(() {
-                        _selectedOption = value!;
-                      });
-                    },
-                  ),
                   Text(
-                    'On a specific date',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                  )
+                    'Urgency',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF5A5C5B)),
+                  ),
                 ],
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                height: 20,
+                child: Row(
+                  children: [
+                    Radio<String>(
+                      value: 'Option 1',
+                      groupValue: _selectedOption,
+                      onChanged: (String? value) {
+                        setState(() {
+                          _selectedOption = value!;
+                        });
+                      },
+                    ),
+                    Text(
+                      'Urgent',
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                height: 20,
+                child: Row(
+                  children: [
+                    Radio<String>(
+                      value: 'Option 2',
+                      groupValue: _selectedOption,
+                      onChanged: (String? value) {
+                        setState(() {
+                          _selectedOption = value!;
+                        });
+                      },
+                    ),
+                    Text(
+                      'Non-urgent',
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 10,
@@ -267,7 +286,7 @@ class _post_matter_2State extends State<post_matter_2> {
                 height: 10,
               ),
               Container(
-                  height: 119,
+                  height: 100,
                   width: 389,
                   color: Color(0xFFF5F7F9),
                   child: Column(

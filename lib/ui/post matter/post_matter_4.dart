@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
 import 'package:mmm_app_design/ui/post%20matter/post_matter_2.dart';
+import 'package:mmm_app_design/ui/post%20matter/post_matter_5.dart';
 import 'package:mmm_app_design/ui/search%20and%20filters/search_results.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
+import 'package:mmm_app_design/ui/widgets/custom_elevated_button_small_blue.dart';
+import 'package:mmm_app_design/ui/widgets/custom_elevated_button_small_width.dart';
+import 'package:mmm_app_design/ui/widgets/custom_elevated_button_whitebg.dart';
 import 'package:mmm_app_design/ui/widgets/custom_textformfield.dart';
 import 'package:mmm_app_design/ui/widgets/elevated_button_filter.dart';
+import 'package:mmm_app_design/ui/widgets/small_elevated_button.dart';
 
 class post_matter_4 extends StatefulWidget {
   const post_matter_4({super.key});
@@ -301,10 +306,27 @@ class _post_matter_4State extends State<post_matter_4> {
               SizedBox(
                 height: 60,
               ),
-              custom_elevated_button(
-                text: 'Next',
-                onPressed: () {},
-              )
+              Row(
+                children: [
+                  custom_elevated_button_small_width_white(
+                    text: 'Cancle',
+                    onPressed: () {},
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  custom_elevated_button_small_width_blue(
+                    text: 'Post matter',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => post_matter_5()),
+                      );
+                    },
+                  )
+                ],
+              ),
             ],
           ),
         ),

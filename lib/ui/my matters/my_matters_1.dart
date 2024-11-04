@@ -1,10 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
 import 'package:mmm_app_design/ui/my%20matters/all_tab.dart';
+import 'package:mmm_app_design/ui/my%20matters/matter_details.dart';
 import 'package:mmm_app_design/ui/post%20matter/post_matter_2.dart';
 import 'package:mmm_app_design/ui/proposals/history_tab.dart';
 import 'package:mmm_app_design/ui/proposals/new_tab.dart';
+import 'package:mmm_app_design/ui/search%20and%20filters/search_result_list.dart';
 import 'package:mmm_app_design/ui/search%20and%20filters/search_results.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/custom_textformfield.dart';
@@ -42,7 +45,7 @@ class my_matters_1 extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  'My matters',
+                  'All matters',
                   style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
@@ -53,8 +56,16 @@ class my_matters_1 extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
+            custom_textformfield(
+              prefixIcon: Image.asset('assets/search.png'),
+              // suffixIcon: Image.asset('assets/mage_filter.png'),
+              hintText: 'Search by case title or case number ',
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Container(
-              height: 650,
+              height: 590,
               width: 400,
               child: DefaultTabController(
                   length: 4,
@@ -98,7 +109,15 @@ class my_matters_1 extends StatelessWidget {
                       ]),
                       Expanded(
                         child: TabBarView(children: [
-                          all_tab(),
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => matter_details(),
+                                    ));
+                              },
+                              child: search_result_list()),
                           history_tab(),
                           all_tab(),
                           history_tab(),

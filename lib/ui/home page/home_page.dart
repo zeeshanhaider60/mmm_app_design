@@ -1,9 +1,15 @@
 // import 'dart:js_util';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:mmm_app_design/ui/bookmarks/bookmark_1.dart';
+import 'package:mmm_app_design/ui/home%20page/best_matches_tab.dart';
 import 'package:mmm_app_design/ui/my%20matters/my_matters_1.dart';
 import 'package:mmm_app_design/ui/post%20matter/post_matter_1.dart';
 import 'package:mmm_app_design/ui/profile/profile_setting_1.dart';
+import 'package:mmm_app_design/ui/proposals/history_tab.dart';
 import 'package:mmm_app_design/ui/proposals/proposals_1.dart';
 import 'package:mmm_app_design/ui/proposals/proposals_2.dart';
 import 'package:mmm_app_design/ui/registration/registration_screen_1.dart';
@@ -88,7 +94,23 @@ class _home_pageState extends State<home_page> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset('assets/icon.png'),
-                  Image.asset('assets/bell.png')
+                  Row(
+                    children: [
+                      GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => bookmark_1(),
+                                ));
+                          },
+                          child: Image.asset('assets/bookmark.png')),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Image.asset('assets/bell.png')
+                    ],
+                  ),
                 ],
               ),
               SizedBox(
@@ -97,6 +119,7 @@ class _home_pageState extends State<home_page> {
               custom_textformfield(
                 prefixIcon: Image.asset('assets/search.png'),
                 // suffixIcon: Image.asset('assets/mage_filter.png'),
+                hintText: 'Search for matters',
                 suffixIcon: GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -110,58 +133,55 @@ class _home_pageState extends State<home_page> {
               SizedBox(
                 height: 10,
               ),
-              SizedBox(
-                height: 138,
-                width: 388,
-                child: Card(
-                  color: Color(0xFFF5F7F9),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Post your legal matter today',
-                            style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xFF1B4965)),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            'Create a free post which contains the\ndetails of your legal issue',
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w400,
-                              color: Color(0xFF454646),
-                            ),
-                          ),
-                          small_elevated_button(
-                            text: 'Get Started',
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                      Image.asset(
-                          'assets/Logistic-Phone-2--Streamline-Ux 1.png')
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
+              // SizedBox(
+              //   height: 138,
+              //   width: 388,
+              //   child: Card(
+              //     color: Color(0xFFF5F7F9),
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(8),
+              //     ),
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.end,
+              //       children: [
+              //         Column(
+              //           mainAxisAlignment: MainAxisAlignment.center,
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             Text(
+              //               'Post your legal matter today',
+              //               style: TextStyle(
+              //                   fontSize: 14,
+              //                   fontWeight: FontWeight.w600,
+              //                   color: Color(0xFF1B4965)),
+              //             ),
+              //             SizedBox(
+              //               height: 10,
+              //             ),
+              //             Text(
+              //               'Create a free post which contains the\ndetails of your legal issue',
+              //               style: TextStyle(
+              //                 fontSize: 10.5,
+              //                 fontWeight: FontWeight.w400,
+              //                 color: Color(0xFF454646),
+              //               ),
+              //             ),
+              //             small_elevated_button(
+              //               text: 'Get Started',
+              //               onPressed: () {},
+              //             ),
+              //           ],
+              //         ),
+              //         Image.asset(
+              //             'assets/Logistic-Phone-2--Streamline-Ux 1.png')
+              //       ],
+              //     ),
+              //   ),
+              // ),
               Row(
                 children: [
                   Text(
-                    'Your recent matters',
+                    'Areas of Legal Practice ',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -173,126 +193,140 @@ class _home_pageState extends State<home_page> {
               SizedBox(
                 height: 10,
               ),
-              SizedBox(
-                // height: 138,
-                height: 158,
-                width: 388,
-                child: Card(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    side: BorderSide(
-                      color: Color(0xFFE8E8E8),
-                      width: 1.0,
-                    ),
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            'Unfair Dismissal Claim',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black,
-                            ),
-                          ),
-                          ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xFFE8EDF0),
-                                minimumSize: Size(70, 30),
-                                padding: EdgeInsets.fromLTRB(4, 8, 4, 8),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(4),
-                                    bottomLeft: Radius.circular(4),
-                                    bottomRight: Radius.circular(4),
-                                    topRight: Radius.circular(4),
-                                  ),
-                                ),
-                                elevation: 0,
-                              ),
-                              onPressed: () {},
-                              child: Text(
-                                'In progress',
-                                style: TextStyle(
-                                    fontSize: 10, fontWeight: FontWeight.w500),
-                              ))
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 22,
-                          ),
-                          Image.asset(
-                              'assets/Legal-Judge--Streamline-Ultimate 1.png'),
-                          Text(
-                            ' John Smith, Esq',
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Image.asset('assets/calendar.png'),
-                          Text(
-                            ' August 15, 2024',
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 22,
-                          ),
-                          Text(
-                            'Update: “Received initial response from opposing counsel”',
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 2,
-                      ),
-                      SizedBox(
-                        width: 300,
-                        child: Divider(
-                          thickness: 2,
-                          color: Color(0xFFE8E8E8),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Group 5 (1).png',
+                          scale: 1.15,
                         ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          small_elevated_button(
-                            text: 'View details',
-                            onPressed: () {},
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Family',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
                           ),
-                          SizedBox(
-                            width: 30,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Group 5 (2).png',
+                          scale: 1.15,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Tax',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
                           ),
-                        ],
-                      )
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Group 5 (3).png',
+                          scale: 1.15,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Criminal',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Group 5 (4).png',
+                          scale: 1.15,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Real Estate',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Group 5 (5).png',
+                          scale: 1.15,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Civil Right',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/Group 5 (5).png',
+                          scale: 1.15,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Civil Right',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
               SizedBox(
@@ -301,7 +335,7 @@ class _home_pageState extends State<home_page> {
               Row(
                 children: [
                   Text(
-                    'Lawyers',
+                    'Highlights',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -313,7 +347,258 @@ class _home_pageState extends State<home_page> {
               SizedBox(
                 height: 10,
               ),
-              Image.asset('assets/lawyer images.png'),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                        width: 135,
+                        height: 132,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFF5F7F9),
+                          border: Border.all(
+                            color: Color(0xFFE8E8E8),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(4),
+                            topRight: Radius.circular(0),
+                            bottomLeft: Radius.circular(0),
+                            bottomRight: Radius.circular(0),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset('assets/Group 37.png'),
+                              SizedBox(
+                                height: 25,
+                              ),
+                              Text(
+                                'Active matters',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xFF454646)),
+                              ),
+                              Text(
+                                '05',
+                                style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        )),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                        width: 140,
+                        height: 132,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFF5F7F9),
+                          border: Border.all(
+                            color: Color(0xFFE8E8E8),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(4),
+                            topRight: Radius.circular(0),
+                            bottomLeft: Radius.circular(0),
+                            bottomRight: Radius.circular(0),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset('assets/Group 38.png'),
+                              SizedBox(
+                                height: 25,
+                              ),
+                              Text(
+                                'Submitted proposals',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xFF454646)),
+                              ),
+                              Text(
+                                '15',
+                                style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        )),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                        width: 135,
+                        height: 132,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFF5F7F9),
+                          border: Border.all(
+                            color: Color(0xFFE8E8E8),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(4),
+                            topRight: Radius.circular(0),
+                            bottomLeft: Radius.circular(0),
+                            bottomRight: Radius.circular(0),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset('assets/Group 38 (1).png'),
+                              SizedBox(
+                                height: 25,
+                              ),
+                              Text(
+                                'Resolved matters',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xFF454646)),
+                              ),
+                              Text(
+                                '02',
+                                style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        )),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                        width: 145,
+                        height: 142,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFF5F7F9),
+                          border: Border.all(
+                            color: Color(0xFFE8E8E8),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(4),
+                            topRight: Radius.circular(0),
+                            bottomLeft: Radius.circular(0),
+                            bottomRight: Radius.circular(0),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset('assets/Group 37.png'),
+                              SizedBox(
+                                height: 35,
+                              ),
+                              Text(
+                                'Active matters',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xFF454646)),
+                              ),
+                              Text(
+                                '05',
+                                style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        )),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                height: 650,
+                child: DefaultTabController(
+                    length: 2,
+                    child: Column(
+                      children: [
+                        TabBar(tabs: [
+                          Tab(
+                            child: Text(
+                              '  Best matches  ',
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                          Tab(
+                            child: Text(
+                              '            Posted                  ',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black),
+                            ),
+                          )
+                        ]),
+                        Expanded(
+                          child: TabBarView(children: [
+                            best_matches_tab(),
+                            history_tab(),
+                          ]),
+                        )
+                      ],
+                    )),
+              )
             ],
           ),
         ),

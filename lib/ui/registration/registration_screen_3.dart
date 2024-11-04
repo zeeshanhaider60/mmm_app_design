@@ -43,7 +43,7 @@ class registration_screen_3 extends StatelessWidget {
                   //   width: 10,
                   // ),
                   Text(
-                    'Let’s confirm your email',
+                    'We just sent to a code',
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w600,

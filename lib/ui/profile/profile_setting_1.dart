@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mmm_app_design/ui/emergency%20brief/emergency_brief.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
 import 'package:mmm_app_design/ui/on%20boarding%20intro/onboarding_splash.dart';
 import 'package:mmm_app_design/ui/post%20matter/post_matter_2.dart';
@@ -14,6 +15,7 @@ import 'package:mmm_app_design/ui/proposals/new_tab_2.dart';
 import 'package:mmm_app_design/ui/registration/registration_screen_1.dart';
 import 'package:mmm_app_design/ui/registration/registration_screen_4.dart';
 import 'package:mmm_app_design/ui/search%20and%20filters/search_results.dart';
+import 'package:mmm_app_design/ui/subscription/subscription.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/custom_textformfield.dart';
 import 'package:mmm_app_design/ui/widgets/elevated_button_filter.dart';
@@ -254,18 +256,27 @@ class profile_setting_1 extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Terms and conditions',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black),
-                ),
-                SvgPicture.asset('assets/chevron-right.svg'),
-              ],
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => emergency_brief(),
+                    ));
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Terms and conditions',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black),
+                  ),
+                  SvgPicture.asset('assets/chevron-right.svg'),
+                ],
+              ),
             ),
             SizedBox(
               height: 95,

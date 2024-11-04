@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   intl: ^0.19.0
   flutter_svg: ^2.0.0
+  # google_mobile_ads: ^5.1.0
+  # google_mobile_ads: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:
@@ -126,12 +128,71 @@ flutter:
     - assets/Group 20.svg
     - assets/Frame 2149.svg
     - assets/check-circle.svg
+    - assets/Frame 2004.svg
+    - assets/Frame 1998.png
+    - assets/Frame 1999.png
+    - assets/Browser-Window-Check--Streamline-Ux 1@2x.svg
+    - assets/Frame 2030.svg
+    - assets/Frame 2030.png
+    - assets/iconoir_profile-circle.svg
+    - assets/Mask group.png
+    - assets/Frame 2030 (1).png
+    - assets/Frame 2030 (2).png
+    - assets/line 10.png
+    - assets/line 17.png
+    - assets/Group 37.png
+    - assets/Group 37 (1).png
+    - assets/Group 37 (2).png
+    - assets/Group 37 (3).png
+    - assets/Group 38.png
+    - assets/Group 38 (1).png
+    - assets/Group 5 (5).png
+    - assets/Group 5 (4).png
+    - assets/Group 5 (3).png
+    - assets/Group 5 (2).png
+    - assets/Group 5 (1).png
+    - assets/bookmark.png
+    - assets/chevron-down (2).png
+    - assets/map-pin.png
+    - assets/phone.png
+    - assets/mail.png
+    - assets/Frame 2261.png
+    - assets/Group 1.png
+    - assets/close-icon.png
+    - assets/Frame 2023 (1).png
+    - assets/Frame 2149.png
+    - assets/Frame 2198.png
+    - assets/Frame 2035.png
+    - assets/Frame 2149 (1).png
+    - assets/solar_verified-check-line-duotone.png
+    - assets/image.png
+    - assets/clock.png
+    - assets/Frame 2023 (2).png
+    - assets/Group 3.png
+    - assets/Group 4.png
 
 
 
 
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

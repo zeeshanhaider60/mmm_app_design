@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 class custom_code_confirmation_textformfield extends StatefulWidget {
   final TextEditingController? controller;
   final String? hintText;
+
   final bool obscureText;
   final double width;
   final double height;
@@ -73,9 +74,13 @@ class _custom_code_confirmation_textformfieldState
           ],
           decoration: InputDecoration(
             hintText: widget.hintText,
+            hintStyle: TextStyle(
+              fontSize: 14,
+              color: Colors.grey,
+            ),
             border: InputBorder.none,
             contentPadding:
-                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
           ),
         ),
       ),

@@ -75,6 +75,26 @@ class post_matter_1 extends StatelessWidget {
               Row(
                 children: [
                   Text(
+                    'Name of client',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF5A5C5B)),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              custom_textformfield(
+                hintText: 'Enter the name of client',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Text(
                     'Select category',
                     style: TextStyle(
                         fontSize: 16,
@@ -116,7 +136,7 @@ class post_matter_1 extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'Case details ',
+                    'Particulars ',
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
@@ -128,7 +148,7 @@ class post_matter_1 extends StatelessWidget {
                 height: 10,
               ),
               Container(
-                height: 265,
+                height: 180,
                 width: 388,
                 color: Color(0xFFE8E8E8),
                 child: custom_textformfield(),

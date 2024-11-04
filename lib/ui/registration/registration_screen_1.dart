@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:mmm_app_design/ui/on%20boarding%20intro/onboarding_splash.dart';
 import 'package:mmm_app_design/ui/registration/registration_screen_2.dart';
@@ -102,7 +104,42 @@ class _registration_screen_1State extends State<registration_screen_1> {
             //     ),
             //   ],
             // ),
-            Image.asset('assets/user legal both.png'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 2.15,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/Frame 1998.png'),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        'User',
+                        style: TextStyle(fontWeight: FontWeight.w400),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 2.15,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/Frame 1999.png'),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        'Legal Professional',
+                        style: TextStyle(fontWeight: FontWeight.w600),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
             SizedBox(
               height: 370,
             ),
