@@ -15,7 +15,6 @@ import 'package:mmm_app_design/ui/proposals/new_tab_2.dart';
 import 'package:mmm_app_design/ui/registration/registration_screen_1.dart';
 import 'package:mmm_app_design/ui/registration/registration_screen_4.dart';
 import 'package:mmm_app_design/ui/search%20and%20filters/search_results.dart';
-import 'package:mmm_app_design/ui/subscription/subscription.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/custom_textformfield.dart';
 import 'package:mmm_app_design/ui/widgets/elevated_button_filter.dart';
