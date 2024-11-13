@@ -39,9 +39,6 @@ class registration_screen_3 extends StatelessWidget {
               ),
               Row(
                 children: [
-                  // SizedBox(
-                  //   width: 10,
-                  // ),
                   Text(
                     'We just sent to a code',
                     style: TextStyle(

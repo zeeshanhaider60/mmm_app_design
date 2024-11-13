@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mmm_app_design/ui/splash%20screen/splash_screen.dart';
-// import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await MobileAds.instance.initialize();
   runApp(const MyApp());
 }
 

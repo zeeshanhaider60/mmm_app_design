@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
@@ -8,7 +10,9 @@ import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button_whitebg.dart';
 
 class profile_creation_3 extends StatelessWidget {
-  const profile_creation_3({super.key});
+  final String? imagePath;
+
+  profile_creation_3({this.imagePath});
 
   @override
   Widget build(BuildContext context) {
@@ -52,9 +56,6 @@ class profile_creation_3 extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      // SizedBox(
-                      //   width: 10,
-                      // ),
                       Text(
                         'Profile Photo',
                         style: TextStyle(
@@ -76,7 +77,14 @@ class profile_creation_3 extends StatelessWidget {
                   SizedBox(
                     height: 60,
                   ),
-                  Image.asset('assets/Mask group.png'),
+                  ClipOval(
+                    child: Image.file(
+                      File(imagePath!),
+                      width: 250,
+                      height: 250,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                   SizedBox(height: 30),
                 ],
               ),

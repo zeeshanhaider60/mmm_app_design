@@ -11,7 +11,7 @@ class best_matches_tab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
+    return Expanded(
       child: ListView.builder(
           itemCount: 6,
           itemBuilder: (context, index) {
@@ -21,11 +21,6 @@ class best_matches_tab extends StatelessWidget {
                   height: 165,
                   width: 388,
                   child: Container(
-                      // color: Color(0xFFF5F7F9),
-                      // color: Colors.white,
-                      // shape: RoundedRectangleBorder(
-                      //   borderRadius: BorderRadius.circular(8),
-                      // ),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
@@ -40,8 +35,6 @@ class best_matches_tab extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
                               children: [
                                 Image.asset('assets/Group 5.png'),
                                 SizedBox(

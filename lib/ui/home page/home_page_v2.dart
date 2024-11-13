@@ -40,13 +40,6 @@ class _home_page_v2State extends State<home_page_v2> {
     });
 
     switch (index) {
-      // case 0:
-      //   Navigator.push(
-      //       context,
-      //       MaterialPageRoute(
-      //         builder: (context) => post_matter_1(),
-      //       ));
-      //   break;
       case 1:
         Navigator.push(
             context,
@@ -107,7 +100,6 @@ class _home_page_v2State extends State<home_page_v2> {
               ),
               custom_textformfield(
                 prefixIcon: Image.asset('assets/search.png'),
-                // suffixIcon: Image.asset('assets/mage_filter.png'),
                 hintText: 'Search for matters',
                 suffixIcon: GestureDetector(
                   onTap: () {
@@ -122,51 +114,6 @@ class _home_page_v2State extends State<home_page_v2> {
               SizedBox(
                 height: 10,
               ),
-              // SizedBox(
-              //   height: 138,
-              //   width: 388,
-              //   child: Card(
-              //     color: Color(0xFFF5F7F9),
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(8),
-              //     ),
-              //     child: Row(
-              //       mainAxisAlignment: MainAxisAlignment.end,
-              //       children: [
-              //         Column(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           crossAxisAlignment: CrossAxisAlignment.start,
-              //           children: [
-              //             Text(
-              //               'Post your legal matter today',
-              //               style: TextStyle(
-              //                   fontSize: 14,
-              //                   fontWeight: FontWeight.w600,
-              //                   color: Color(0xFF1B4965)),
-              //             ),
-              //             SizedBox(
-              //               height: 10,
-              //             ),
-              //             Text(
-              //               'Create a free post which contains the\ndetails of your legal issue',
-              //               style: TextStyle(
-              //                 fontSize: 10.5,
-              //                 fontWeight: FontWeight.w400,
-              //                 color: Color(0xFF454646),
-              //               ),
-              //             ),
-              //             small_elevated_button(
-              //               text: 'Get Started',
-              //               onPressed: () {},
-              //             ),
-              //           ],
-              //         ),
-              //         Image.asset(
-              //             'assets/Logistic-Phone-2--Streamline-Ux 1.png')
-              //       ],
-              //     ),
-              //   ),
-              // ),
               Row(
                 children: [
                   Text(
@@ -336,7 +283,6 @@ class _home_page_v2State extends State<home_page_v2> {
               SizedBox(
                 height: 10,
               ),
-
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -771,14 +717,6 @@ class _home_page_v2State extends State<home_page_v2> {
                         ),
                         backgroundColor: Color(0xFF1B4965),
                       ),
-                      // Text(
-                      //   '11',
-                      //   style: TextStyle(
-                      //     fontSize: 14,
-                      //     fontWeight: FontWeight.w500,
-                      //     color: Colors.black,
-                      //   ),
-                      // ),
                     ],
                   ),
                   SizedBox(
@@ -839,11 +777,6 @@ class _home_page_v2State extends State<home_page_v2> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Column(
-                          //   children: [
-                          //     Image.asset('assets/Line 17.png'),
-                          //   ],
-                          // ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -1110,10 +1043,8 @@ class _home_page_v2State extends State<home_page_v2> {
                           )
                         ]),
                         Expanded(
-                          child: TabBarView(children: [
-                            best_matches_tab(),
-                            history_tab(),
-                          ]),
+                          child: TabBarView(
+                              children: [best_matches_tab(), SizedBox()]),
                         )
                       ],
                     )),

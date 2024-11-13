@@ -1,5 +1,3 @@
-// import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
@@ -98,7 +96,6 @@ class freelancer_profile extends StatelessWidget {
               SizedBox(
                 height: 25,
               ),
-              // SvgPicture.asset('assets/Line 13.svg'),
               Divider(
                 thickness: 1.0,
               ),
@@ -116,7 +113,6 @@ class freelancer_profile extends StatelessWidget {
                   ),
                 ],
               ),
-
               SizedBox(
                 height: 15,
               ),
@@ -135,7 +131,6 @@ class freelancer_profile extends StatelessWidget {
                   ),
                 ],
               ),
-
               SizedBox(
                 height: 10,
               ),

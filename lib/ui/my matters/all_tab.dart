@@ -18,11 +18,6 @@ class all_tab extends StatelessWidget {
                 height: 185,
                 width: 388,
                 child: Container(
-                    // color: Color(0xFFF5F7F9),
-                    // color: Colors.white,
-                    // shape: RoundedRectangleBorder(
-                    //   borderRadius: BorderRadius.circular(8),
-                    // ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8),
@@ -133,107 +128,7 @@ class all_tab extends StatelessWidget {
                           )
                         ],
                       ),
-                    )
-
-                    // Row(
-                    //   children: [
-                    //     Column(
-                    //       children: [
-                    //         Row(
-                    //           mainAxisAlignment: MainAxisAlignment.center,
-                    //           children: [
-                    //             Image.asset('assets/Group 5.png'),
-                    //             SizedBox(
-                    //               width: 5,
-                    //             ),
-                    //             Row(
-                    //               children: [
-                    //                 SizedBox(
-                    //                   width: 5,
-                    //                 ),
-                    //                 Text(
-                    //                   'Child custody issue',
-                    //                   style: TextStyle(
-                    //                       fontSize: 17,
-                    //                       fontWeight: FontWeight.w600,
-                    //                       color: Colors.black),
-                    //                 ),
-                    //               ],
-                    //             ),
-                    //             Row(
-                    //               children: [
-                    //                 SizedBox(
-                    //                   width: 5,
-                    //                 ),
-                    //                 Text('Family law',
-                    //                     style: TextStyle(
-                    //                         fontSize: 14,
-                    //                         fontWeight: FontWeight.w400,
-                    //                         color: Color(0xFF454646))),
-                    //               ],
-                    //             ),
-                    //             SizedBox(
-                    //               width: 10,
-                    //             ),
-                    //             Column(
-                    //               children: [
-                    //                 Image.asset('assets/Frame 1989.png'),
-                    //                 SizedBox(
-                    //                   height: 22,
-                    //                 ),
-                    //               ],
-                    //             ),
-                    //           ],
-                    //         ),
-                    //       ],
-                    //     ),
-                    //     SizedBox(
-                    //       height: 15,
-                    //     ),
-                    //     Row(
-                    //       mainAxisAlignment: MainAxisAlignment.center,
-                    //       children: [
-                    //         RichText(
-                    //           text: TextSpan(
-                    //             children: [
-                    //               TextSpan(
-                    //                 text: 'Cover letter: “',
-                    //                 style: TextStyle(
-                    //                     color: Colors.black,
-                    //                     fontSize: 12,
-                    //                     fontWeight: FontWeight.w600),
-                    //               ),
-                    //               TextSpan(
-                    //                 text:
-                    //                     'Lorem ipsum dolor sit amet consectetur. Felis \nconsectetur condimentum tortor volutpat faucibus iaculis”',
-                    //                 style: TextStyle(
-                    //                     color: Colors.black,
-                    //                     fontSize: 12,
-                    //                     fontWeight: FontWeight.w400),
-                    //               ),
-                    //             ],
-                    //           ),
-                    //         ),
-                    //       ],
-                    //     ),
-                    //     SizedBox(
-                    //       height: 15,
-                    //     ),
-                    //     Row(
-                    //       mainAxisAlignment: MainAxisAlignment.end,
-                    //       children: [
-                    //         proposal_elevated_button(
-                    //           text: 'View details',
-                    //           onPressed: () {},
-                    //         ),
-                    //         SizedBox(
-                    //           width: 30,
-                    //         ),
-                    //       ],
-                    //     ),
-                    //   ],
-                    // ),
-                    ),
+                    )),
               ),
               SizedBox(
                 height: 15,

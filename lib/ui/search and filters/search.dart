@@ -1,16 +1,21 @@
-// import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
 import 'package:mmm_app_design/ui/search%20and%20filters/search_results.dart';
+import 'package:mmm_app_design/ui/widgets/custom_dropdown.dart';
 import 'package:mmm_app_design/ui/widgets/custom_textformfield.dart';
 import 'package:mmm_app_design/ui/widgets/elevated_button_filter.dart';
 
-class search extends StatelessWidget {
+class search extends StatefulWidget {
   const search({super.key});
 
   @override
+  State<search> createState() => _searchState();
+}
+
+class _searchState extends State<search> {
+  @override
   Widget build(BuildContext context) {
+    var selectedValue;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -71,8 +76,15 @@ class search extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              custom_textformfield(
-                hintText: 'Select the court of your choice',
+              custom_dropdown(
+                hintText: "Select the court of your choice",
+                items: ["Option 1", "Option 2", "Option 3"],
+                value: selectedValue,
+                onChanged: (newValue) {
+                  setState(() {
+                    selectedValue = newValue;
+                  });
+                },
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(
@@ -92,8 +104,15 @@ class search extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              custom_textformfield(
-                hintText: 'Select the court of your choice',
+              custom_dropdown(
+                hintText: "Select the court of your choice",
+                items: ["Option 1", "Option 2", "Option 3"],
+                value: selectedValue,
+                onChanged: (newValue) {
+                  setState(() {
+                    selectedValue = newValue;
+                  });
+                },
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(
@@ -113,8 +132,15 @@ class search extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              custom_textformfield(
-                hintText: 'Select the state of matter',
+              custom_dropdown(
+                hintText: "Select the state of matter",
+                items: ["Option 1", "Option 2", "Option 3"],
+                value: selectedValue,
+                onChanged: (newValue) {
+                  setState(() {
+                    selectedValue = newValue;
+                  });
+                },
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(

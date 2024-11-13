@@ -1,5 +1,3 @@
-// import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mmm_app_design/ui/freelancer%20profile/freelancer_profile.dart';
@@ -55,7 +53,6 @@ class submit_proposal extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              // SvgPicture.asset('assets/Line 13.svg'),
               Divider(
                 thickness: 2.0,
               ),
@@ -115,7 +112,6 @@ class submit_proposal extends StatelessWidget {
                   ),
                 ],
               ),
-
               SizedBox(
                 height: 15,
               ),

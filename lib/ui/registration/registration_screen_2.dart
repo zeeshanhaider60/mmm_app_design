@@ -38,9 +38,6 @@ class registration_screen_2 extends StatelessWidget {
               ),
               Row(
                 children: [
-                  // SizedBox(
-                  //   width: 10,
-                  // ),
                   Text(
                     'Enter your email address',
                     style: TextStyle(
@@ -64,9 +61,7 @@ class registration_screen_2 extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              custom_textformfield(
-                  // hintText: '',
-                  ),
+              custom_textformfield(),
               SizedBox(
                 height: 480,
               ),

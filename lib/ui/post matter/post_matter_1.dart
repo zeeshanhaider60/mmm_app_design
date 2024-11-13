@@ -1,18 +1,23 @@
-// import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
 import 'package:mmm_app_design/ui/post%20matter/post_matter_2.dart';
 import 'package:mmm_app_design/ui/search%20and%20filters/search_results.dart';
+import 'package:mmm_app_design/ui/widgets/custom_dropdown.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/custom_textformfield.dart';
 import 'package:mmm_app_design/ui/widgets/elevated_button_filter.dart';
 
-class post_matter_1 extends StatelessWidget {
+class post_matter_1 extends StatefulWidget {
   const post_matter_1({super.key});
 
   @override
+  State<post_matter_1> createState() => _post_matter_1State();
+}
+
+class _post_matter_1State extends State<post_matter_1> {
+  @override
   Widget build(BuildContext context) {
+    var selectedValue;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -106,8 +111,15 @@ class post_matter_1 extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              custom_textformfield(
-                hintText: 'Case type',
+              custom_dropdown(
+                hintText: "Case type",
+                items: ["Option 1", "Option 2", "Option 3"],
+                value: selectedValue,
+                onChanged: (newValue) {
+                  setState(() {
+                    selectedValue = newValue;
+                  });
+                },
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(

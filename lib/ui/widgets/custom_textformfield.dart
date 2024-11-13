@@ -89,7 +89,6 @@ class _custom_textformfieldState extends State<custom_textformfield> {
             border: InputBorder.none,
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 11, horizontal: 10),
-            // counterText: '',
           ),
         ),
       ),

@@ -39,9 +39,6 @@ class registration_screen_4 extends StatelessWidget {
               ),
               Row(
                 children: [
-                  // SizedBox(
-                  //   width: 10,
-                  // ),
                   Text(
                     'Finish signing up',
                     style: TextStyle(

@@ -1,5 +1,3 @@
-// import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
@@ -79,10 +77,7 @@ class proposals_1 extends StatelessWidget {
                         )
                       ]),
                       Expanded(
-                        child: TabBarView(children: [
-                          new_tab(),
-                          history_tab(),
-                        ]),
+                        child: TabBarView(children: [new_tab(), SizedBox()]),
                       )
                     ],
                   )),

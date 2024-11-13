@@ -18,11 +18,6 @@ class new_tab_2 extends StatelessWidget {
                 height: 160,
                 width: 388,
                 child: Container(
-                    // color: Color(0xFFF5F7F9),
-                    // color: Colors.white,
-                    // shape: RoundedRectangleBorder(
-                    //   borderRadius: BorderRadius.circular(8),
-                    // ),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8),

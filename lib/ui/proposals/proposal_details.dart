@@ -1,5 +1,3 @@
-// import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
@@ -51,7 +49,6 @@ class proposals_details extends StatelessWidget {
             SizedBox(
               height: 0,
             ),
-            // SvgPicture.asset('assets/Line 13.svg'),
             Divider(
               thickness: 2.0,
             ),

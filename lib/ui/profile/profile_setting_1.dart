@@ -25,106 +25,210 @@ class profile_setting_1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 40,
+              ),
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => home_page()),
+                      );
+                    },
+                    child: Image.asset('assets/Group 2.png'),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Proposals ',
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SvgPicture.asset('assets/Frame 2149.svg'),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Marvin McKinney',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black),
+                      ),
+                      Text(
+                        'marvin.mckinney@example.com',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xFF454646)),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Account settings',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF454646)),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Divider(
+                thickness: 2,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => home_page()),
-                    );
-                  },
-                  child: Image.asset('assets/Group 2.png'),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Text(
-                  'Proposals ',
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                SvgPicture.asset('assets/Frame 2149.svg'),
-                SizedBox(
-                  width: 5,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                      MaterialPageRoute(
+                        builder: (context) => edit_profile(),
+                      ));
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Marvin McKinney',
+                      'Edit profile',
                       style: TextStyle(
                           fontSize: 18,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                           color: Colors.black),
                     ),
-                    Text(
-                      'marvin.mckinney@example.com',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: Color(0xFF454646)),
-                    ),
+                    SvgPicture.asset('assets/chevron-right.svg'),
                   ],
-                )
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: [
-                Text(
-                  'Account settings',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xFF454646)),
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Divider(
-              thickness: 2,
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => edit_profile(),
-                    ));
-              },
-              child: Row(
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => change_password(),
+                      ));
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Change password',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
+                    SvgPicture.asset('assets/chevron-right.svg'),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => update_email(),
+                      ));
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Update email',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
+                    SvgPicture.asset('assets/chevron-right.svg'),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Edit profile',
+                    'Alert notifications',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black),
+                  ),
+                  SvgPicture.asset('assets/Group 20.svg'),
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'More',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF454646)),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Divider(
+                thickness: 2,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'About us',
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
@@ -133,23 +237,14 @@ class profile_setting_1 extends StatelessWidget {
                   SvgPicture.asset('assets/chevron-right.svg'),
                 ],
               ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => change_password(),
-                    ));
-              },
-              child: Row(
+              SizedBox(
+                height: 15,
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Change password',
+                    'Privay policy',
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
@@ -158,139 +253,46 @@ class profile_setting_1 extends StatelessWidget {
                   SvgPicture.asset('assets/chevron-right.svg'),
                 ],
               ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => update_email(),
-                    ));
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Update email',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black),
-                  ),
-                  SvgPicture.asset('assets/chevron-right.svg'),
-                ],
+              SizedBox(
+                height: 15,
               ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Alert notifications',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => emergency_brief(),
+                      ));
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Terms and conditions',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
+                    SvgPicture.asset('assets/chevron-right.svg'),
+                  ],
                 ),
-                SvgPicture.asset('assets/Group 20.svg'),
-              ],
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Row(
-              children: [
-                Text(
-                  'More',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xFF454646)),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Divider(
-              thickness: 2,
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'About us',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black),
-                ),
-                SvgPicture.asset('assets/chevron-right.svg'),
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Privay policy',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black),
-                ),
-                SvgPicture.asset('assets/chevron-right.svg'),
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => emergency_brief(),
-                    ));
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Terms and conditions',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black),
-                  ),
-                  SvgPicture.asset('assets/chevron-right.svg'),
-                ],
               ),
-            ),
-            SizedBox(
-              height: 95,
-            ),
-            custom_elevated_button(
-              text: 'Logout',
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => onboarding_splash(),
-                    ));
-              },
-            )
-          ],
+              SizedBox(
+                height: 95,
+              ),
+              custom_elevated_button(
+                text: 'Logout',
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => onboarding_splash(),
+                      ));
+                },
+              )
+            ],
+          ),
         ),
       ),
     );

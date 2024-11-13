@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 import 'package:mmm_app_design/ui/home%20page/home_page.dart';
 import 'package:mmm_app_design/ui/profile%20creation/profile_creation_3.dart';
 import 'package:mmm_app_design/ui/registration/registration_screen_5.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button_whitebg.dart';
 
-class profile_creation_2 extends StatelessWidget {
+class profile_creation_2 extends StatefulWidget {
   const profile_creation_2({super.key});
 
+  @override
+  State<profile_creation_2> createState() => _profile_creation_2State();
+}
+
+class _profile_creation_2State extends State<profile_creation_2> {
+  final ImagePicker _picker = ImagePicker();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,9 +59,6 @@ class profile_creation_2 extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      // SizedBox(
-                      //   width: 10,
-                      // ),
                       Text(
                         'Profile Photo',
                         style: TextStyle(
@@ -121,28 +126,40 @@ class profile_creation_2 extends StatelessWidget {
                 height: 70,
               ),
               custom_elevated_button(
-                text: 'Continue',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => profile_creation_3(),
-                      ));
-                },
-              ),
+                  text: 'Continue',
+                  onPressed: () async {
+                    final XFile? pickedImage =
+                        await _picker.pickImage(source: ImageSource.gallery);
+
+                    if (pickedImage != null) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              profile_creation_3(imagePath: pickedImage.path),
+                        ),
+                      );
+                    }
+                  }),
               SizedBox(
                 height: 10,
               ),
               custom_elevated_button_whitebg(
-                text: 'Take Photo',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => profile_creation_3(),
-                      ));
-                },
-              )
+                  text: 'Take Photo',
+                  onPressed: () async {
+                    final XFile? capturedImage =
+                        await _picker.pickImage(source: ImageSource.camera);
+
+                    if (capturedImage != null) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              profile_creation_3(imagePath: capturedImage.path),
+                        ),
+                      );
+                    }
+                  })
             ],
           ),
         ),

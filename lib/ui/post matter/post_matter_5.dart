@@ -312,7 +312,6 @@ class _post_matter_5State extends State<post_matter_5> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
                           height: 5,

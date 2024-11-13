@@ -282,14 +282,6 @@ class _emergency_briefState extends State<emergency_brief> {
                         ),
                         backgroundColor: Color(0xFF1B4965),
                       ),
-                      // Text(
-                      //   '11',
-                      //   style: TextStyle(
-                      //     fontSize: 14,
-                      //     fontWeight: FontWeight.w500,
-                      //     color: Colors.black,
-                      //   ),
-                      // ),
                     ],
                   ),
                   SizedBox(
@@ -350,11 +342,6 @@ class _emergency_briefState extends State<emergency_brief> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Column(
-                          //   children: [
-                          //     Image.asset('assets/Line 17.png'),
-                          //   ],
-                          // ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -598,11 +585,6 @@ class _emergency_briefState extends State<emergency_brief> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Column(
-                          //   children: [
-                          //     Image.asset('assets/Line 17.png'),
-                          //   ],
-                          // ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

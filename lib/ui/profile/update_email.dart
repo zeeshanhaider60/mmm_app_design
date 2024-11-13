@@ -40,9 +40,6 @@ class update_email extends StatelessWidget {
               ),
               Row(
                 children: [
-                  // SizedBox(
-                  //   width: 10,
-                  // ),
                   Text(
                     'Update email address',
                     style: TextStyle(
@@ -57,9 +54,6 @@ class update_email extends StatelessWidget {
               ),
               Row(
                 children: [
-                  // SizedBox(
-                  //   width: 10,
-                  // ),
                   Text(
                     'Enter your new email below',
                     style: TextStyle(

@@ -40,9 +40,6 @@ class change_password extends StatelessWidget {
               ),
               Row(
                 children: [
-                  // SizedBox(
-                  //   width: 10,
-                  // ),
                   Text(
                     'Change password',
                     style: TextStyle(
@@ -106,11 +103,6 @@ class change_password extends StatelessWidget {
               ),
               custom_textformfield(
                 hintText: '•••••••',
-                // suffixIcon: SvgPicture.asset(
-                //   'assets/eye.svg',
-                //   height: 2,
-                //   width: 2,
-                // ),
                 suffixIcon: Icon(Icons.remove_red_eye),
               ),
               SizedBox(

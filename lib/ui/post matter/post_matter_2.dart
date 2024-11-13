@@ -3,6 +3,7 @@ import 'package:mmm_app_design/ui/home%20page/home_page.dart';
 import 'package:mmm_app_design/ui/post%20matter/post_matter_1.dart';
 import 'package:mmm_app_design/ui/post%20matter/post_matter_loading.dart';
 import 'package:mmm_app_design/ui/search%20and%20filters/search_results.dart';
+import 'package:mmm_app_design/ui/widgets/custom_dropdown.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/custom_textformfield.dart';
 import 'package:mmm_app_design/ui/widgets/elevated_button_filter.dart';
@@ -16,6 +17,8 @@ class post_matter_2 extends StatefulWidget {
 
 class _post_matter_2State extends State<post_matter_2> {
   String _selectedOption = 'Option 1';
+
+  get selectedValue => null;
   void _showAttachmentBottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -160,8 +163,15 @@ class _post_matter_2State extends State<post_matter_2> {
               SizedBox(
                 height: 10,
               ),
-              custom_textformfield(
-                hintText: 'Select the location of court',
+              custom_dropdown(
+                hintText: "Select the location of court",
+                items: ["Option 1", "Option 2", "Option 3"],
+                value: selectedValue,
+                onChanged: (newValue) {
+                  setState(() {
+                    var selectedvalue = newValue;
+                  });
+                },
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(
@@ -181,8 +191,15 @@ class _post_matter_2State extends State<post_matter_2> {
               SizedBox(
                 height: 10,
               ),
-              custom_textformfield(
-                hintText: 'Select the type of court',
+              custom_dropdown(
+                hintText: "Select the type of court",
+                items: ["Option 1", "Option 2", "Option 3"],
+                value: selectedValue,
+                onChanged: (newValue) {
+                  setState(() {
+                    var selectedvalue = newValue;
+                  });
+                },
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(
@@ -202,8 +219,15 @@ class _post_matter_2State extends State<post_matter_2> {
               SizedBox(
                 height: 10,
               ),
-              custom_textformfield(
-                hintText: 'Select the current status of matter',
+              custom_dropdown(
+                hintText: "Select the current status of matter",
+                items: ["Option 1", "Option 2", "Option 3"],
+                value: selectedValue,
+                onChanged: (newValue) {
+                  setState(() {
+                    var selectedvalue = newValue;
+                  });
+                },
                 suffixIcon: Image.asset('assets/chevron-down.png'),
               ),
               SizedBox(

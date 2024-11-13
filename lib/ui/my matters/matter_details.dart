@@ -50,7 +50,6 @@ class matter_details extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              // SvgPicture.asset('assets/Line 13.svg'),
               Divider(
                 thickness: 2.0,
               ),
@@ -188,7 +187,6 @@ class matter_details extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              // SvgPicture.asset('assets/Frame 2023.svg'),
               Image.asset(
                 'assets/Frame 2023 (1).png',
               ),

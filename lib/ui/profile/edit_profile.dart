@@ -39,9 +39,6 @@ class edit_profile extends StatelessWidget {
               ),
               Row(
                 children: [
-                  // SizedBox(
-                  //   width: 10,
-                  // ),
                   Text(
                     'Edit Profile',
                     style: TextStyle(

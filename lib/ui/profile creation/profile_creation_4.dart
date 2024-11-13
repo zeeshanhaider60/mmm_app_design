@@ -8,9 +8,14 @@ import 'package:mmm_app_design/ui/registration/registration_screen_5.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button.dart';
 import 'package:mmm_app_design/ui/widgets/custom_elevated_button_whitebg.dart';
 
-class profile_creation_4 extends StatelessWidget {
+class profile_creation_4 extends StatefulWidget {
   profile_creation_4({super.key});
 
+  @override
+  State<profile_creation_4> createState() => _profile_creation_4State();
+}
+
+class _profile_creation_4State extends State<profile_creation_4> {
   final List<String> skills = [
     "Legal Research",
     "Negotiation",
@@ -26,6 +31,14 @@ class profile_creation_4 extends StatelessWidget {
     "Conflict Resolution",
     "Legal Compliance"
   ];
+
+  List<bool> selectedSkills = [];
+
+  @override
+  void initState() {
+    super.initState();
+    selectedSkills = List.generate(skills.length, (index) => false);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,9 +82,6 @@ class profile_creation_4 extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      // SizedBox(
-                      //   width: 10,
-                      // ),
                       Text(
                         'About Yourself',
                         style: TextStyle(
@@ -110,29 +120,35 @@ class profile_creation_4 extends StatelessWidget {
                           spacing: 7.0,
                           runSpacing: 0.0,
                           children: skills.map((skill) {
-                            // Highlight "Legal Writing" and "Trial Advocacy"
-                            bool isHighlighted = skill == "Legal Writing" ||
-                                skill == "Trial Advocacy";
-                            return Chip(
-                              label: Text(skill),
-                              backgroundColor:
-                                  isHighlighted ? Colors.white : Colors.white,
-                              shape: StadiumBorder(
-                                side: BorderSide(
-                                  color: isHighlighted
-                                      ? Color(0xFF1B4965)
-                                      : Color(0xFFE8E8E8),
-                                  width: 1,
+                            int index = skills.indexOf(skill);
+
+                            return GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  selectedSkills[index] =
+                                      !selectedSkills[index];
+                                });
+                              },
+                              child: Chip(
+                                label: Text(skill),
+                                backgroundColor: Colors.white,
+                                shape: StadiumBorder(
+                                  side: BorderSide(
+                                    color: selectedSkills[index]
+                                        ? Color(0xFF1B4965)
+                                        : Color(0xFFE8E8E8),
+                                    width: 1,
+                                  ),
                                 ),
-                              ),
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 1.0, vertical: 0.0),
-                              labelStyle: TextStyle(
-                                fontSize: 12,
-                                color: Colors.black,
-                                fontWeight: isHighlighted
-                                    ? FontWeight.w400
-                                    : FontWeight.normal,
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 1.0, vertical: 0.0),
+                                labelStyle: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.black,
+                                  fontWeight: selectedSkills[index]
+                                      ? FontWeight.w400
+                                      : FontWeight.normal,
+                                ),
                               ),
                             );
                           }).toList(),
@@ -140,7 +156,6 @@ class profile_creation_4 extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // SizedBox(height: 30),
                 ],
               ),
               SizedBox(

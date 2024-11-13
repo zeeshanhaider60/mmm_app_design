@@ -58,15 +58,12 @@ class my_matters_1 extends StatelessWidget {
             ),
             custom_textformfield(
               prefixIcon: Image.asset('assets/search.png'),
-              // suffixIcon: Image.asset('assets/mage_filter.png'),
               hintText: 'Search by case title or case number ',
             ),
             SizedBox(
               height: 10,
             ),
-            Container(
-              height: 590,
-              width: 400,
+            Expanded(
               child: DefaultTabController(
                   length: 4,
                   child: Column(
@@ -118,9 +115,9 @@ class my_matters_1 extends StatelessWidget {
                                     ));
                               },
                               child: search_result_list()),
-                          history_tab(),
-                          all_tab(),
-                          history_tab(),
+                          SizedBox(),
+                          search_result_list(),
+                          SizedBox()
                         ]),
                       )
                     ],

@@ -1,5 +1,3 @@
-// import 'dart:js_util';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -43,13 +41,6 @@ class _home_pageState extends State<home_page> {
     });
 
     switch (index) {
-      // case 0:
-      //   Navigator.push(
-      //       context,
-      //       MaterialPageRoute(
-      //         builder: (context) => post_matter_1(),
-      //       ));
-      //   break;
       case 1:
         Navigator.push(
             context,
@@ -118,7 +109,6 @@ class _home_pageState extends State<home_page> {
               ),
               custom_textformfield(
                 prefixIcon: Image.asset('assets/search.png'),
-                // suffixIcon: Image.asset('assets/mage_filter.png'),
                 hintText: 'Search for matters',
                 suffixIcon: GestureDetector(
                   onTap: () {
@@ -133,51 +123,6 @@ class _home_pageState extends State<home_page> {
               SizedBox(
                 height: 10,
               ),
-              // SizedBox(
-              //   height: 138,
-              //   width: 388,
-              //   child: Card(
-              //     color: Color(0xFFF5F7F9),
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(8),
-              //     ),
-              //     child: Row(
-              //       mainAxisAlignment: MainAxisAlignment.end,
-              //       children: [
-              //         Column(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           crossAxisAlignment: CrossAxisAlignment.start,
-              //           children: [
-              //             Text(
-              //               'Post your legal matter today',
-              //               style: TextStyle(
-              //                   fontSize: 14,
-              //                   fontWeight: FontWeight.w600,
-              //                   color: Color(0xFF1B4965)),
-              //             ),
-              //             SizedBox(
-              //               height: 10,
-              //             ),
-              //             Text(
-              //               'Create a free post which contains the\ndetails of your legal issue',
-              //               style: TextStyle(
-              //                 fontSize: 10.5,
-              //                 fontWeight: FontWeight.w400,
-              //                 color: Color(0xFF454646),
-              //               ),
-              //             ),
-              //             small_elevated_button(
-              //               text: 'Get Started',
-              //               onPressed: () {},
-              //             ),
-              //           ],
-              //         ),
-              //         Image.asset(
-              //             'assets/Logistic-Phone-2--Streamline-Ux 1.png')
-              //       ],
-              //     ),
-              //   ),
-              // ),
               Row(
                 children: [
                   Text(
@@ -591,10 +536,8 @@ class _home_pageState extends State<home_page> {
                           )
                         ]),
                         Expanded(
-                          child: TabBarView(children: [
-                            best_matches_tab(),
-                            history_tab(),
-                          ]),
+                          child: TabBarView(
+                              children: [best_matches_tab(), SizedBox()]),
                         )
                       ],
                     )),
